@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Club 421</title>
+    <link rel="icon" type="image/png" href="fotos/Logo Club 421.png">
+    <style>
+        :root {
+            --primary-color: #1dc5c9;
+            --secondary-color: #2c3e50;
+            --background-color: #f4f7f6;
+            --text-color: #333;
+            --card-background: white;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            max-height: 80px;
+            max-width: 120px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        .runner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .runner-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .runner-card:hover {
+            transform: scale(1.05);
+        }
+
+        .runner-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid var(--primary-color);
+        }
+
+        .login-section {
+            max-width: 400px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-form button:hover {
+            background-color: #19a0a5;
+        }
+
+        .video-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .video-section video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        #videoUploadSection {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                position: static;
+                transform: none;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="clubLogo" src="fotos/Logo Club 421.png" alt="Club 421 Logo" class="logo">
+        <h1>Club 421 - Running Team</h1>
+    </header>
+
+    <div class="container">
+        <section id="club-info">
+            <h2 class="section-title">Sobre Nuestro Club</h2>
+            <p>Club 421 nace de la pasión por el running y el deseo de superar límites. Fundado en 2020, nos dedicamos a entrenar, crecer y disfrutar juntos de este increíble deporte.</p>
+        </section>
+
+        <section id="runners">
+            <h2 class="section-title">Nuestros Corredores</h2>
+            <div class="runner-grid">
+                <div class="runner-card">
+                    <img src="fotos/Álvaro Villegas.png" alt="Álvaro Villegas">
+                    <h3>Álvaro Villegas</h3>
+                    <p><strong>Carreras realizadas:</strong></p>
+                    <ul>
+                        <li>21km Madrid</li>
+                        <li>10km Aranjuez x2</li>
+                        <li>21km Bilbao</li>
+                        <li>21km Behobia</li>
+                    </ul>
+                </div>
+
+                <div class="runner-card">
+                    <img src="fotos/Victor Gil.jpeg" alt="Victor Gil">
+                    <h3>Victor Gil</h3>
+                    <p><strong>Carreras realizadas:</strong></p>
+                    <ul>
+                        <li>10km Aranjuez</li>
+                        <li>10Km Madrid</li>
+                        <li>21Km Bilbao</li>
+                        <li>10Km Aranjuez</li>
+                    </ul>
+                    <p><strong>Próximo objetivo:</strong>21Km Madrid</p>
+                </div>
+
+                <div class="runner-card">
+                    <img src="fotos/Nacho Moreno.jpg" alt="Nacho Moreno">
+                    <h3>Nacho Moreno</h3>
+                    <p><strong>Carreras realizadas:</strong></p>
+                    <ul>
+                        <li>42km Valencia</li>
+                        <li>21Km Valencia</li>
+                        <li>21Km Madrid x2</li>
+                        <li>21Km Behobia</li>
+                        <li>21Km Sevilla</li>
+                        <li>10Km Aranjuez</li>
+                    </ul>
+                </div>
+
+                <div class="runner-card">
+                    <img src="fotos/Diego Grau.png" alt="Diego Grau">
+                    <h3>Diego Grau</h3>
+                    <p><strong>Carreras realizadas:</strong></p>
+                    <ul>
+                        <li>42km Valencia</li>
+                        <li>42km Paris</li>
+                        <li>21km Madrid</li>
+                        <li>21Km Bilbao</li>
+                        <li>21Km Behobia</li>
+                        <li>10Km Aranjuez</li>
+                    </ul>
+                </div>
+
+                <div class="runner-card">
+                    <img src="fotos/Jorge Toba.png" alt="Jorge Toba">
+                    <h3>Jorge Toba</h3>
+                    <p><strong>Carreras realizadas:</strong></p>
+                    <ul>
+                        <li>21km Behobia</li>
+                        <li>10K Aranjuez</li>
+                    </ul>
+                    <p><strong>Próximo objetivo:</strong>21km Madird</p>
+                </div>
+
+                <div class="runner-card">
+                    <img src="fotos/Íñigo Ruiz.jpeg" alt="Iñigo Ruiz">
+                    <h3>Iñigo Ruiz</h3>
+                    <p><strong>Carreras realizadas:</strong></p>
+                    <ul>
+                        <li>21km Madrid</li>
+                        <li>10Km Aranjuez x2</li>
+                        <li>10km Madrid</li>
+                        <li>21km Bilbao</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
